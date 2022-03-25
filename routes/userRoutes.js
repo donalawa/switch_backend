@@ -47,7 +47,7 @@ userRouter.post("/user/login", userController.signin);
  * @apiVersion 1.1.0
  **/
 
-userRouter.post("/user/update",[tokenMidleWare.verifyToken, tokenMidleWare.isAdmin], userController.updateUsrs);
+userRouter.post("/user/update",[tokenMidleWare.verifyToken, tokenMidleWare.isAdmin], userController.updateUser);
 
 
 

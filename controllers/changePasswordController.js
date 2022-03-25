@@ -26,7 +26,7 @@ exports.changePassword = (req,res) => {
           );
     
           if (!passwordIsValid) {
-            return res.status(401).send({
+            return res.status(400).send({
               accessToken: null,
               message: "Old Password Is Incorrect",
             });

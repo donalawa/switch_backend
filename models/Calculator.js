@@ -6,7 +6,8 @@ const Calculator = new mongoose.Schema({
     description: String,
     notificationEmail: String,
     ownerId: {
-        type: mongoose.Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
     },
     hasTheme: {
         type: Boolean,  

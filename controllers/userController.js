@@ -159,7 +159,7 @@ exports.signup = (req, res) => {
   
 
 
-  exports.updateUsrs = async (req,res) => {
+  exports.updateUser = async (req,res) => {
     console.log("REQUEST GOT HERE")
     try {
       let userId = req.userId;

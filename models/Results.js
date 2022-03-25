@@ -14,6 +14,10 @@ const AnswersSchema = new mongoose.Schema({
     email: String,
     phone: String,
     message: String,
+    calcOwnerId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    },
     calculatorId: mongoose.Schema.Types.ObjectId,
     clientPandT: {
         time: {type: String},
@@ -21,9 +25,15 @@ const AnswersSchema = new mongoose.Schema({
     },
     clientOptions: [
         {
-            questionId: {type: mongoose.Schema.Types.ObjectId},
+            questionId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Question"
+            },
             options: [
-                {type: mongoose.Schema.Types.ObjectId}
+                {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: "Answer"
+                }
             ]
         }
     ]
